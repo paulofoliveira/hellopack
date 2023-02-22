@@ -1,0 +1,37 @@
+name: 'Deploy to Nuget'
+
+on:
+  push:
+    branches: [main]
+  
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+env:
+  PROJECT_PATH: "src/HelloPack.CLI/HelloPack.CLI.csproj"
+  PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}\output
+  NUGET_SOURCE_URL: 'https://api.nuget.org/v3/index.json'
+
+jobs:
+  deploy:
+    name: 'Deploy'
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Checkout'
+      uses: actions/checkout@v3
+
+    - name: 'Setup dotnet'
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '6.x'
+
+    - name: 'Restore Packages'
+      run: dotnet restore ${{ env.PROJECT_PATH }}
+
+    - name: 'Build Project'
+      run: dotnet build ${{ env.PROJECT_PATH }} --no-restore --configuration Release
+
+    - name: 'Pack Project'
+      run: dotnet pack ${{ env.PROJECT_PATH }} --no-restore --no-build --configuration Release --include-symbols --output ${{ env.PACKAGE_OUTPUT_DIRECTORY }}
+
+    - name: 'Push Package'
+      run: dotnet nuget push ${{ env.PACKAGE_OUTPUT_DIRECTORY }}\*.nupkg -k ${{ secrets.NUGET_API_KEY }} s ${{ env.NUGET_SOURCE_URL }}
