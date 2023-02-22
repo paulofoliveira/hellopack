@@ -9,7 +9,7 @@ class Program
     {
         try
         {
-            return await CommandLineApplication.ExecuteAsync<Commands>(args);
+            return await CommandLineApplication.ExecuteAsync<HelloPackCommands>(args);
         }
         catch (Exception ex)
         {
@@ -22,7 +22,7 @@ class Program
 
     [Command(Name = "hellopack", Description = "Aplicação CLI hellopack", ExtendedHelpText = "Executa rotinas através de linha de comando")]
     [HelpOption]
-    public class Commands
+    public class HelloPackCommands
     {
 
         [Option("-t | --time", CommandOptionType.NoValue, Description = "Show Local Time", ShowInHelpText = true)]
