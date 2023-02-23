@@ -37,6 +37,11 @@ class Program
                 console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
             }
 
+            if (DateOnly)
+            {
+                console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy"));
+            }
+
             return OK;
         }
 
