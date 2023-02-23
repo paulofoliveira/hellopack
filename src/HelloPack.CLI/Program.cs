@@ -32,7 +32,7 @@ class Program
         {
             if (ShowTime)
             {
-                console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm"));
+                console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
             }
 
             return OK;
