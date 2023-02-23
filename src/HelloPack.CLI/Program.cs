@@ -28,6 +28,8 @@ class Program
         [Option("-t | --time", CommandOptionType.NoValue, Description = "Show Local Time", ShowInHelpText = true)]
         public bool ShowTime { get; set; }
 
+        [Option("-do | --dateonly", CommandOptionType.NoValue, Description = "Show Date Only", ShowInHelpText = true)]
+        public bool DateOnly { get; set; }
         public int OnExecute(CommandLineApplication app, IConsole console)
         {
             if (ShowTime)
