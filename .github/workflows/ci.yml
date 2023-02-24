@@ -6,8 +6,6 @@ on:
 
 env:
   PROJECT_PATH: "src/HelloPack.CLI/HelloPack.CLI.csproj"
-  PACKAGE_OUTPUT_DIRECTORY: ${{ github.workspace }}/output
-  NUGET_SOURCE_URL: 'https://api.nuget.org/v3/index.json'
 
 jobs:
   deploy:
@@ -26,7 +24,7 @@ jobs:
       run: dotnet restore ${{ env.PROJECT_PATH }}
 
     - name: 'Build Project'
-      run: dotnet build ${{ env.PROJECT_PATH }} --no-restore --configuration Release -p:Version=${{ steps.version.outputs.version-without-v }}
+      run: dotnet build ${{ env.PROJECT_PATH }} --no-restore --configuration Release
 
     - name: Install Versionize
       run: dotnet tool install --global Versionize
