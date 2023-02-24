@@ -14,10 +14,11 @@ env:
   NUGET_SOURCE_URL: 'https://api.nuget.org/v3/index.json'
 
 jobs:
-  deploy:
-    name: 'Deploy'
-    runs-on: ubuntu-latest
-    steps:
+  publish-new-version:
+  if: ${{ github.event.workflow_run.conclusion == 'success' }}
+  name: 'Publish New Version'
+  runs-on: ubuntu-latest
+  steps:
     - name: 'Checkout Code'
       uses: actions/checkout@v3
 
