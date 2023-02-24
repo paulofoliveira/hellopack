@@ -8,8 +8,8 @@ env:
   PROJECT_PATH: "src/HelloPack.CLI/HelloPack.CLI.csproj"
 
 jobs:
-  deploy:
-    name: 'Deploy'
+  build-and-restore:
+    name: 'Build and Restore'
     runs-on: ubuntu-latest
     steps:
     - name: 'Checkout Code'
@@ -27,6 +27,12 @@ jobs:
 
     - name: 'Build Project'
       run: dotnet build ${{ env.PROJECT_PATH }} --no-restore --configuration Release
+
+  run-versionize:
+    name: 'Run Versionize'
+    runs-on: ubuntu-latest
+    needs: build-and-restore
+    steps:
 
     - name: Install Versionize
       run: dotnet tool install --global Versionize
