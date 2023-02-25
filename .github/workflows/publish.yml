@@ -1,8 +1,9 @@
 name: 'Publish to Nuget'
 
 on:
-  push:
-    tags: 'v*'
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
   
   workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
 
