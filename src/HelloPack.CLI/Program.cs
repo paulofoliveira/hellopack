@@ -31,6 +31,9 @@ class Program
         [Option("-t|--timeonly", CommandOptionType.NoValue, Description = "Show Time", ShowInHelpText = true)]
         public bool TimeOnly { get; set; }
 
+        [Option("-d|--dateonly", CommandOptionType.NoValue, Description = "Show Date", ShowInHelpText = true)]
+        public bool DateOnly { get; set; }
+
         public int OnExecute(CommandLineApplication app, IConsole console)
         {
             if (Now)
@@ -41,6 +44,11 @@ class Program
             if (TimeOnly)
             {
                 console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
+            }
+
+            if (DateOnly)
+            {
+                console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy"));
             }
 
             return OK;
