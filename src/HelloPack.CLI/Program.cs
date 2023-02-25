@@ -43,7 +43,7 @@ class Program
 
             if (TimeOnly)
             {
-                console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
+                console.WriteLine(DateTime.Now.ToString("HH:mm:ss"))
             }
 
             if (DateOnly)
