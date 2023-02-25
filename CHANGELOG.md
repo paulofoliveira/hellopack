@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.4.1"></a>
+## [1.4.1](https://www.github.com/paulofoliveira/hellopack/releases/tag/v1.4.1) (2023-2-25)
+
+### Bug Fixes
+
+* Atualizado versão de action/github-script ([9d28928](https://www.github.com/paulofoliveira/hellopack/commit/9d289283822a73e6ad06373c4c9892f0454383ca))
+
 <a name="1.4.0"></a>
 ## [1.4.0](https://www.github.com/paulofoliveira/hellopack/releases/tag/v1.4.0) (2023-2-25)
 
