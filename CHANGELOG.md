@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.3.1"></a>
+## [1.3.1](https://www.github.com/paulofoliveira/hellopack/releases/tag/v1.3.1) (2023-2-25)
+
+### Bug Fixes
+
+* Trigger Workflow (#13) ([0a4c0f6](https://www.github.com/paulofoliveira/hellopack/commit/0a4c0f682ee1014e0049bb25a8d135a46914857a))
+
 <a name="1.3.0"></a>
 ## [1.3.0](https://www.github.com/paulofoliveira/hellopack/releases/tag/v1.3.0) (2023-2-24)
 
