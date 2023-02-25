@@ -25,14 +25,22 @@ class Program
     public class HelloPackCommands
     {
 
-        [Option("-t | --time", CommandOptionType.NoValue, Description = "Show Local Time", ShowInHelpText = true)]
-        public bool ShowTime { get; set; }
+        [Option("-n|--now", CommandOptionType.NoValue, Description = "Show Local Time", ShowInHelpText = true)]
+        public bool Now { get; set; }
+
+        [Option("-t|--timeonly", CommandOptionType.NoValue, Description = "Show Time", ShowInHelpText = true)]
+        public bool TimeOnly { get; set; }
 
         public int OnExecute(CommandLineApplication app, IConsole console)
         {
-            if (ShowTime)
+            if (Now)
             {
                 console.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
+            }
+
+            if (TimeOnly)
+            {
+                console.WriteLine(DateTime.Now.ToString("HH:mm:ss"));
             }
 
             return OK;
