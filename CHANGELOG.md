@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.4.0"></a>
+## [1.4.0](https://www.github.com/paulofoliveira/hellopack/releases/tag/v1.4.0) (2023-2-25)
+
+### Features
+
+* Novos comandos (#14) ([bba99ea](https://www.github.com/paulofoliveira/hellopack/commit/bba99eac44f9e940a303033e11a74277e874f653))
+
 <a name="1.3.2"></a>
 ## [1.3.2](https://www.github.com/paulofoliveira/hellopack/releases/tag/v1.3.2) (2023-2-25)
 
