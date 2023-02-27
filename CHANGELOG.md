@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.4.4"></a>
+## [1.4.4](https://www.github.com/paulofoliveira/hellopack/releases/tag/v1.4.4) (2023-2-27)
+
+### Bug Fixes
+
+* Teste ([42dc174](https://www.github.com/paulofoliveira/hellopack/commit/42dc1743493dee8dfccc11b375302a644c9105d2))
+
+### Other
+
+* Teste ([fb1d666](https://www.github.com/paulofoliveira/hellopack/commit/fb1d66637b983bb75410ccf6761be0025c79519b))
+
 <a name="1.4.3"></a>
 ## [1.4.3](https://www.github.com/paulofoliveira/hellopack/releases/tag/v1.4.3) (2023-2-25)
 
